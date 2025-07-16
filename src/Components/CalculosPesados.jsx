@@ -13,11 +13,14 @@ export const CalculosPesados = () => {
     setCalculo([
       ...calculo, calculo[calculo.length - 1] + 1 
     ])
-    
+    console.log(calculo)
   }
 
   const [show, setShow] = useState(true)     
 
+  const cambiarBoton = () => {
+    setShow(!show)
+  }
 
   return (
     <>
@@ -26,7 +29,7 @@ export const CalculosPesados = () => {
       <h2>Calculos Pesados:</h2>
       <p>{calcular(calculo)}</p>
       <button className='btn btn-success' onClick={addNumero}>Calcular</button>
-      <button className='btn btn-danger' onClick={() => setShow(!show)}>{ show ? ' Show' : 'Hide'}</button>
+      <button className='btn btn-danger' onClick={cambiarBoton}>{ show ? ' Show' : 'Hide'}</button>
     </>
   )
 }
