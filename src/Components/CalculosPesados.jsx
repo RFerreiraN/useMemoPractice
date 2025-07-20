@@ -2,9 +2,9 @@ import {useEffect, useMemo, useState} from 'react'
 
 export const CalculosPesados = () => {
 
-  const [calculo, setCalculo] = useState([2,6,4,8,9,7,5,9])
+  const [calculo, setCalculo] = useState([2])
 
-  const calcular = (calculo) => useMemo(() =>{
+  const calcular = () => useMemo(() =>{
     console.log('Calculando..')
     return calculo.reduce((a,b) => a * b , 1)
   }, [calculo])
